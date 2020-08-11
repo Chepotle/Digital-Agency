@@ -1,0 +1,29 @@
+@keyframes jump {
+    0% {
+        top: 0px;
+    }
+    100% {
+        top: 50px;
+    }
+}
+
+[data-aos="new-top"] {
+    opacity: 0;
+    transform: translateY(-400px);
+    transition-property: transform, opacity;
+    &.aos-animate {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+[data-aos="new-bot"] {
+    opacity: 0;
+    transform: translateY(400px);
+    transition-property: transform, opacity;
+    &.aos-animate {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
