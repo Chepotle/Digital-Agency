@@ -1,0 +1,82 @@
+.burger {
+    display: none;
+    width: 40px;
+    height: 30px;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    span {
+        width: 100%;
+        position: absolute;
+        height: 2px;
+        left: 0;
+        top: 13px;
+        background-color: #fff;
+    }
+    &::before {
+        width: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        background-color: #fff;
+        content: "";
+        height: 2px;
+    }
+    &::after {
+        width: 100%;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        background-color: #fff;
+        content: "";
+        height: 2px;
+    }
+}
+
+.burger_menu_wraper {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    background-color: #11749e;
+    transition-duration: 0.5s;
+    z-index: 1;
+}
+
+.burger_menu {
+    li {
+        margin-bottom: 55px;
+    }
+}
+
+.burger_link {
+    color: #ffffff;
+    font-family: 'Gotham-Book';
+    font-size: 20px;
+}
+
+.burger_close {
+    display: none;
+}
+
+.burger_icon {
+    margin-right: 15px;
+}
+
+// 
+
+.burger_position {
+    width: 50%;
+    transition-duration: 0.5s;
+}
+
+.burger_menu_display {
+    display: block;
+}

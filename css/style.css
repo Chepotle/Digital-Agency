@@ -146,6 +146,98 @@ h1, h2, h3, h4, h5, h6 {
   opacity: 1;
 }
 
+.burger {
+  display: none;
+  width: 40px;
+  height: 30px;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  z-index: 2;
+}
+
+.burger span {
+  width: 100%;
+  position: absolute;
+  height: 2px;
+  left: 0;
+  top: 13px;
+  background-color: #fff;
+}
+
+.burger::before {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: #fff;
+  content: "";
+  height: 2px;
+}
+
+.burger::after {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background-color: #fff;
+  content: "";
+  height: 2px;
+}
+
+.burger_menu_wraper {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  background-color: #11749e;
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+  z-index: 1;
+}
+
+.burger_menu li {
+  margin-bottom: 55px;
+}
+
+.burger_link {
+  color: #ffffff;
+  font-family: 'Gotham-Book';
+  font-size: 20px;
+}
+
+.burger_close {
+  display: none;
+}
+
+.burger_icon {
+  margin-right: 15px;
+}
+
+.burger_position {
+  width: 50%;
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+}
+
+.burger_menu_display {
+  display: block;
+}
+
 main {
   overflow: hidden;
 }
@@ -162,33 +254,43 @@ main {
 
 .intro {
   background-image: url(../img/intro.png);
-  height: 100vh;
-  max-width: 100%;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
 }
 
+.intro_block {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 20px 30px 80px 30px;
+}
+
 .header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 67px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding-top: 30px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .intro_logo {
-  width: 15%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
 .intro_square {
@@ -223,27 +325,21 @@ main {
   right: 55px;
 }
 
-.intro_menu {
+.nav_menu {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 70%;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.intro_menu ul li {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
 }
 
 .intro_link {
   color: #ffffff;
   font-family: 'Gotham-Book';
   font-size: 20px;
-  margin: 0 20px;
+  margin: 0 15px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  position: relative;
 }
 
 .intro_link:hover::after {
@@ -262,15 +358,18 @@ main {
   opacity: 0;
   height: 6px;
   background-color: #11749e;
-  position: relative;
-  top: 40px;
+  position: absolute;
+  left: 0;
+  top: 52px;
 }
 
 .intro_social {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 15%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .intro_icon {
@@ -288,7 +387,6 @@ main {
 }
 
 .intro_content {
-  height: calc(100vh - 67px);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -296,9 +394,6 @@ main {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -334,8 +429,6 @@ main {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  position: relative;
-  top: 20%;
 }
 
 .intro_button_text {
@@ -416,10 +509,11 @@ main {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  width: 25%;
+  margin: 0 20px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 20%;
 }
 
 .awesome_circle {
@@ -580,8 +674,8 @@ main {
 }
 
 .akita_item_2 {
-  margin-left: 58%;
   min-height: 50vh;
+  margin-left: 58%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1191,15 +1285,31 @@ main {
   .intro_subtitle {
     letter-spacing: 11.88px;
   }
-  .intro_menu {
-    display: none;
+  .intro_link {
+    font-size: 18px;
+    margin: 0px 15px;
   }
-  .intro_social {
-    display: none;
+  .intro_icon {
+    margin: 0 10px;
   }
 }
 
 @media (max-width: 992px) {
+  .intro {
+    background-attachment: scroll;
+  }
+  .burger {
+    display: block;
+  }
+  .header {
+    position: relative;
+  }
+  .intro_social {
+    display: none;
+  }
+  .nav_menu {
+    display: none;
+  }
   .container {
     max-width: 750px;
   }
@@ -1220,6 +1330,7 @@ main {
   }
   .awesome_items {
     width: 100%;
+    margin-bottom: 20px;
   }
   .blog_section {
     -webkit-box-orient: vertical;
@@ -1328,12 +1439,18 @@ main {
   .dog_text {
     text-align: center;
   }
+  .awesome_header {
+    margin-bottom: 10px;
+  }
+  .intro_button {
+    visibility: hidden;
+  }
+  .intro_title {
+    margin-top: 70px;
+  }
 }
 
 @media (max-width: 768px) {
-  .container {
-    width: none;
-  }
   .intro_subtitle {
     letter-spacing: 7.88px;
   }
@@ -1361,14 +1478,11 @@ main {
   .form_submit {
     margin-top: 25px;
   }
-  .intro_button {
-    top: 15%;
-  }
 }
 
 @media (max-width: 576px) {
-  .intro_button {
-    top: 10%;
+  .burger_menu li {
+    margin-bottom: 35px;
   }
   .intro_subtitle {
     letter-spacing: 4.88px;
@@ -1397,5 +1511,11 @@ main {
   .dog_section_img img {
     max-width: 290px;
     max-height: 400px;
+  }
+  .akita_title {
+    margin-bottom: 10px;
+  }
+  .akita_text {
+    margin-bottom: 10px;
   }
 }

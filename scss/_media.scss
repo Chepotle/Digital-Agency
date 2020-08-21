@@ -1,0 +1,272 @@
+// Media
+
+// 1500
+
+@media(max-width: 1500px) {
+
+    .intro_subtitle {
+        letter-spacing: 14.88px;
+    }
+}
+
+// 1200
+
+@media(max-width: 1200px) {
+
+    .intro_subtitle {
+        letter-spacing: 11.88px;
+    }
+
+    .intro_link {
+        font-size: 18px;
+        margin: 0px 15px;
+    }
+
+    .intro_icon {
+        margin: 0 10px;
+    }
+    
+}
+
+
+// 992
+
+@media(max-width: 992px) {
+
+    .intro {
+        background-attachment: scroll;
+    }
+
+    .burger {
+        display: block;
+    }
+
+    .header {
+        position: relative;
+    }
+
+    .intro_social {
+        display: none;
+    }
+
+    .nav_menu {
+        display: none;
+    }
+    
+    .container {
+        max-width: 750px;
+    }
+
+    .intro_subtitle {
+        letter-spacing: 9.88px;
+    }
+
+    .awesome_block {
+        align-items: center;
+        flex-direction: column;
+        margin-top: 35px;
+        text-align: center;
+        padding-bottom: 45px;
+        
+    }
+
+    .awesome_items {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .blog_section {
+        flex-direction: column;
+        img {
+            width: auto;
+        }
+    }
+
+    .blog_item {
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .blog_block {
+        flex-direction: column;
+        padding: 15px 0;
+    }
+
+    .blog_article_item {
+        width: 100%;
+        padding: 15px 0;
+    }
+
+    .dog_block {
+        flex-direction: column;
+    }
+
+    .dog_section {
+        width: 100%;
+        padding: 20px 0;
+    }
+
+    .dog_section_img {
+        width: 100%;
+        padding: 20px 0;
+    }
+
+    .team_block {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .team_prof {
+        margin-bottom: 50px;
+    }
+
+    .akita {
+        min-height: 100vh;
+        &::before {
+            width: 100%;
+            height: 50%;
+        }
+        &::after {
+            width: 100%;
+            height: 50vh;
+            top: 50vh;
+        }
+    }
+
+    .akita_item {
+        width: 100%;
+        min-height: 50vh;
+        align-items: center;
+        
+    }
+
+    .akita_item_2 {
+        width: 100%;
+        min-height: 50vh;
+        align-items: center;
+        margin-left: 0;
+    }
+
+    .akita_2 {
+        min-height: 100vh;
+        &::before {
+            width: 100%;
+            height: 50%;
+        }
+        &::after {
+            width: 100%;
+            height: 50vh;
+            top: 50vh;
+        }
+    }
+
+    .form_title {
+        top: -128px;
+    }
+
+    .intro_logo {
+        width: 50%;
+    }
+
+    .dog_text {
+        text-align: center;
+    }
+
+    .awesome_header {
+        margin-bottom: 10px;
+    }
+
+    .intro_button {
+        visibility: hidden;
+    }
+
+    .intro_title {
+        margin-top: 70px;
+    }
+}
+
+// 768
+
+@media(max-width: 768px) {
+
+    .intro_subtitle {
+        letter-spacing: 7.88px;
+    }
+
+    .form_item {
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column;   
+    }
+
+    .form_email {
+        margin: 15px 0;
+    }
+
+    .form_name, .form_email, .form_phone {
+        width: 100%;
+    }
+
+    .form_button {
+        padding-bottom: 25px;
+    }
+
+    .form_submit {
+        margin-top: 25px;
+    }
+
+
+}
+
+// 576
+
+@media(max-width: 576px) {
+
+    .burger_menu li {
+        margin-bottom: 35px;
+    }
+
+    .intro_subtitle {
+        letter-spacing: 4.88px;
+    }
+
+    .dog_line_1, .dog_line_2, .dog_line_3 {
+        height: 73px;
+    } 
+
+    .blog_article_img img {
+        margin-bottom: 20px;
+    }
+
+    .blog_article_text {
+        margin-left: 0;
+    }
+
+    .blog_article_item {
+        flex-direction: column;
+    }
+}
+
+@media(max-width: 450px) {
+
+    .intro_subtitle {
+        letter-spacing: 2.88px;
+    }
+
+    .dog_section_img {
+        img {
+            max-width: 290px;
+            max-height: 400px;
+        }
+    }
+
+    .akita_title {
+        margin-bottom: 10px;
+    }
+
+    .akita_text {
+        margin-bottom: 10px;
+    }
+}
