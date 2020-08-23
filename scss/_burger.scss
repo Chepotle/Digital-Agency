@@ -5,7 +5,8 @@
     position: absolute;
     right: 0;
     top: 50%;
-    transform: translateX(-50%);
+    transform: translateY(-50%);
+    
     z-index: 2;
     span {
         width: 100%;
@@ -79,4 +80,5 @@
 
 .burger_menu_display {
     display: block;
+    min-width: 160px;
 }
