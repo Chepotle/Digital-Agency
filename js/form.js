@@ -23,7 +23,15 @@ document.addEventListener('DOMContentLoaded', function () {
         if (input.classList.contains('_email')) {
             if (emailTest(input)) {
                 formAddError(input);
-                error++
+                error++;
+            }
+        } else if (input.getAttribute('type') === 'checkbox' && input.checked === false) {
+            formAddError(input);
+            error++;
+        } else {
+            if (input.value === '') {
+                formAddError(input);
+                erorr++;
             }
         }
     }

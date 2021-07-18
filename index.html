@@ -362,13 +362,19 @@
                 <h3 class="form_title">We’d love to hear about your project.</h3>
                 <form class="form_block" id="form">
                     <div class="form_item">
-                        <input type="text" name="" id="" class="form_name _req" placeholder="Name">
-                        <input type="text" name="" id="" class="form_email _req _email" placeholder="Email">
-                        <input type="text" name="" id="" class="form_phone _req" placeholder="Phone">
+                        <input type="text" required id="name" class="form_name _req" placeholder="Name*">
+                        <input type="text" required id="email" class="form_email _req _email" placeholder="Email*">
+                        <input type="text" required id="phone" class="form_phone _req" placeholder="Phone*">
                     </div>
                     <textarea name="" id="" cols="30" rows="10" class="form_message" placeholder="Message"></textarea>
                     <div class="form_button">
-                        <button class="form_submit">SUBMIT</button>
+                        <button type="submit" class="form_submit">SUBMIT</button>
+                    </div>
+                    <div class="form_checkbox">
+                        <input type="checkbox" checked id="check">
+                        <label for="check">
+                            <span>I agree with privacy policy</span>
+                        </label>
                     </div>
                 </form>
             </div>
@@ -387,6 +393,7 @@
     <script src="js//animations.js"></script>
     <script src="js//scroll.js"></script>
     <script src="js//burger.js"></script>
+    <script src="js//form.js"></script>
 </body>
 
 </html>
