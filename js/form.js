@@ -14,19 +14,19 @@ document.addEventListener('DOMContentLoaded', function () {
             let formBlock = document.querySelector('.form');
             formBlock.classList.add('_sending');
 
-            let response = await fetch('sendmail.php', {
-                method: 'POST',
-                body: formData
-            });
-            if (response.ok) {
-                let result = await response.json();
-                alert(result.message);
-                form.reset();
-                formBlock.classList.remove('_sending');
-            } else {
-                alert('Error');
-                formBlock.classList.remove('_sending');
-            }
+            // let response = await fetch('sendmail.php', {
+            //     method: 'POST',
+            //     body: formData
+            // });
+            // if (response.ok) {
+            //     let result = await response.json();
+            //     alert(result.message);
+            //     form.reset();
+            //     formBlock.classList.remove('_sending');
+            // } else {
+            //     alert('Error');
+            //     formBlock.classList.remove('_sending');
+            // }
         } else {
             alert('Fill in required fields')
         }
